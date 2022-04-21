@@ -1,32 +1,42 @@
 package com.day22;
 
-public class AddressBook {
+public class AddressBook extends Contact{
 
-	String firstName,lastName,address,city,state,email;
+	String address,city,state;
 	long phoneNo;
 	int zip;
 	
-	public void setDetails() {
-		
-		firstName = "Yadu";
-		lastName  = "Krishnan";
-		address   = "Nirmalyam";
-		city	  = "Kalpathur";
-		state	  = "Kerala";
-		email	  =	"xyz@gmail.com";
-		phoneNo   = 3333333;
-		zip		  = 76439;
-		
+	public String getAddress() {
+		return address;
 	}
-
-	public void print() {
-		
-		System.out.println("\nfirstName : " + firstName +"\n LastName : "+ lastName +
-				"\n Address: "+ address +"\nCity : "+city +"\nState :"+state +"\nEmail :"+email+ 
-				"\nPhone No:" +phoneNo+"\nZip :"+zip);
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public long getPhoneNo() {
+		return phoneNo;
+	}
+	public void setPhoneNo(long phoneNo) {
+		this.phoneNo = phoneNo;
+	}
+	public int getZip() {
+		return zip;
+	}
+	public void setZip(int zip) {
+		this.zip = zip;
+	}
 	
-	}
-
 }
 
 
