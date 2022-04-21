@@ -9,6 +9,7 @@ public class Main {
 		String firstName, lastName, email,address,city,state;;
 		long phoneNo;
 		int zip;
+		char option;
 		Scanner scanner = new Scanner(System.in);
 		AddressBook addressBook = new AddressBook();
 		
@@ -44,17 +45,21 @@ public class Main {
 		zip = scanner.nextInt();
 		addressBook.setZip(zip);
 		
+		ContactOperation contactOperation = new ContactOperation();
+		contactOperation.showContact(addressBook);
+		
+		System.out.println("Do you want to Edit Press(Y/N)");
+		option = scanner.next().charAt(0);
+		
+		
+		if(option == 'Y') {
+			
+			contactOperation.editContact(addressBook);
+			
+		}
+		contactOperation.showContact(addressBook);
 		scanner.close();
 		
-		System.out.println("First Name : "+addressBook.getFirstName());
-		System.out.println("Last Name  : "+addressBook.getLastName());
-		System.out.println("Email      : "+addressBook.getEmail());
-		System.out.println("Address    :  "+addressBook.getAddress());
-		System.out.println("City       :   "+addressBook.getCity());
-		System.out.println("State      :   "+addressBook.getState());
-		System.out.println("Phone Number: "+addressBook.getPhoneNo());
-		System.out.println("Zip :"+addressBook.getZip());
-	
 	}
 
 }
