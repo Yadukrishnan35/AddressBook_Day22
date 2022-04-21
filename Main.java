@@ -57,8 +57,15 @@ public class Main {
 			contactOperation.editContact(addressBook);
 			
 		}
-		contactOperation.showContact(addressBook);
-		scanner.close();
+			contactOperation.showContact(addressBook);
+		
+		 	System.out.print("\nDo you want to delete? press Y / N : ");
+	        char deleteOption = scanner.next().charAt(0);
+	        if(deleteOption == 'Y'){
+	            addressBook = contactOperation.deleteContact(addressBook);
+	        }
+	        contactOperation.showContact(addressBook);
+	        scanner.close();
 		
 	}
 
